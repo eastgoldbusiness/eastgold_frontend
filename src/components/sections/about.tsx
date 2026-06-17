@@ -12,7 +12,7 @@ const COLORS = {
 
 const STATS = [
   { icon: Users, value: '10K+', label: 'Happy Customers' },
-  { icon: ShieldCheck, value: '15+', label: 'Years of Experience' },
+  { icon: ShieldCheck, value: '5+', label: 'Services' },
   { icon: Award, value: '100%', label: 'Transparency' },
   { icon: CheckCircle2, value: '100%', label: 'Customer Satisfaction' },
 ]
@@ -127,11 +127,11 @@ export function About() {
           </motion.p>
 
           {/* Stats row */}
-          <motion.div variants={fadeInUp} className="mt-12 grid grid-cols-2 gap-y-8 sm:flex">
+          <motion.div variants={fadeInUp} className="mt-12 grid grid-cols-2 gap-x-6 gap-y-8 sm:flex">
             {STATS.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex min-w-0 flex-col items-center px-2 text-center sm:flex-1 sm:px-3 ${
+                className={`flex min-w-0 flex-col items-center px-3 text-center sm:flex-1 sm:px-6 ${
                   i > 0 ? 'sm:border-l sm:border-[rgba(212,160,23,0.25)]' : ''
                 }`}
               >
@@ -152,8 +152,8 @@ export function About() {
                   {t.about.stats[i]?.value ?? stat.value}
                 </span>
                 <span
-                  className="mt-1 text-[11px] leading-snug font-medium break-words hyphens-none sm:text-xs"
-                  style={{ color: COLORS.muted }}
+                  className="mt-1 flex min-h-[2.75em] items-center justify-center text-center text-[11px] font-medium break-words hyphens-none sm:text-xs"
+                  style={{ color: COLORS.muted, lineHeight: 1.35 }}
                 >
                   {t.about.stats[i]?.label ?? stat.label}
                 </span>

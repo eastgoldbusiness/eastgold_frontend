@@ -158,7 +158,7 @@ export const translations: Record<Language, Translation> = {
       cta: 'Get Free Gold Valuation',
       stats: [
         { value: '10K+', label: 'Customers Served' },
-        { value: '15+', label: 'Years of Experience' },
+        { value: '5+', label: 'Services' },
         { value: '100%', label: 'Secure Process' },
       ],
       features: [
@@ -192,7 +192,7 @@ export const translations: Record<Language, Translation> = {
         'At EastGold, every customer is treated with respect. We explain the valuation, service process and next steps clearly before proceeding.',
       stats: [
         { value: '10K+', label: 'Happy Customers' },
-        { value: '15+', label: 'Years of Experience' },
+        { value: '5+', label: 'Services' },
         { value: '100%', label: 'Transparency' },
         { value: '100%', label: 'Customer Satisfaction' },
       ],
@@ -405,7 +405,7 @@ export const translations: Record<Language, Translation> = {
       cta: 'இலவச தங்க மதிப்பீடு பெறுங்கள்',
       stats: [
         { value: '10K+', label: 'சேவை பெற்ற வாடிக்கையாளர்கள்' },
-        { value: '15+', label: 'ஆண்டு அனுபவம்' },
+        { value: '5+', label: 'சேவைகள்' },
         { value: '100%', label: 'பாதுகாப்பான முறை' },
       ],
       features: [
@@ -438,10 +438,10 @@ export const translations: Record<Language, Translation> = {
       description:
         'EastGold-ல் ஒவ்வொரு வாடிக்கையாளரின் தேவையும் தனிப்பட்டதாக கருதப்படுகிறது. உங்கள் தங்கத்தின் மதிப்பீடு, சேவை முறை மற்றும் அடுத்த படிகள் அனைத்தும் தொடங்குவதற்கு முன் எளிமையாக விளக்கப்படும்.',
       stats: [
-        { value: '10K+', label: 'மகிழ்ச்சியான வாடிக்கையாளர்கள்' },
-        { value: '15+', label: 'ஆண்டு அனுபவம்' },
-        { value: '100%', label: 'வெளிப்படைத்தன்மை' },
-        { value: '100%', label: 'வாடிக்கையாளர் திருப்தி' },
+        { value: '10K+', label: 'வாடிக்கையாளர்கள்' },
+        { value: '5+', label: 'சேவைகள்' },
+        { value: '100%', label: 'வெளிப்படை' },
+        { value: '100%', label: 'திருப்தி' },
       ],
     },
     process: {
