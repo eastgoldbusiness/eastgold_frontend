@@ -1,0 +1,20 @@
+{
+  "name": "eastgold-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "EastGold admin API — admin auth and gold-rate management.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

@@ -1,0 +1,348 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Brand design tokens (luxury gold exchange) */
+@theme {
+  --font-sans: 'Jost', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', ui-serif, Georgia, serif;
+
+  --color-gold: #d4af37;
+  --color-gold-dark: #b8932e;
+  --color-gold-light: #e8d39a;
+  --color-cream: #f8f6f2;
+  --color-ink: #111111;
+  --color-ash: #5a5a5a;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.269 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.371 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  /* Lenis drives smooth scrolling globally; native smooth scroll would fight it
+     and cause stutter. Fall back to native smooth only when motion is reduced
+     (Lenis is disabled there). */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  html,
+  body {
+    /* `clip` (not `hidden`) prevents horizontal overflow without turning the
+       page into a scroll container — which would break `position: sticky`
+       (used by the Services stacking cards). */
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100vw;
+  }
+  body {
+    @apply bg-white text-ink font-sans antialiased;
+  }
+
+  /* ── Tamil typography fixes ───────────────────────────────────────────────
+     Tamil characters carry stacked vowel signs (above/below the base glyph),
+     so the tight display line-heights used across the site (1.05–1.1) clip
+     them and collapse vertical rhythm. Give Tamil headings/labels more room.
+     `!important` is required because many headings set line-height inline. */
+  html.lang-ta h1,
+  html.lang-ta h2,
+  html.lang-ta h3,
+  html.lang-ta .ta-loose {
+    line-height: 1.4 !important;
+  }
+  html.lang-ta .ta-loose-tight {
+    line-height: 1.3 !important;
+  }
+  /* The oversized Latin *display* headings (hero / about) are tuned for short
+     English words and overflow their column with longer Tamil text — running
+     into the adjacent image. Scale them down just for Tamil. */
+  html.lang-ta .display-hero {
+    font-size: clamp(1.7rem, 3.4vw, 2.6rem) !important;
+    line-height: 1.25 !important;
+  }
+  html.lang-ta .display-about {
+    font-size: clamp(1.8rem, 3.4vw, 2.9rem) !important;
+  }
+  html.lang-ta .display-why {
+    font-size: clamp(1.6rem, 2.6vw, 2.3rem) !important;
+  }
+  /* Small uppercase eyebrow labels clip Tamil top-marks at line-height ~1. */
+  html.lang-ta .eyebrow-label {
+    line-height: 1.6 !important;
+  }
+  ::selection {
+    background-color: rgba(212, 175, 55, 0.25);
+    color: #111111;
+  }
+
+  /* Respect users who prefer reduced motion — neutralise heavy animation. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-gold-mesh {
+    background-color: #fffdf5;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(254, 243, 199, 0.5) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(253, 230, 138, 0.3) 0px, transparent 50%);
+  }
+  .text-gradient-gold {
+    background-image: linear-gradient(135deg, #b8932e 0%, #d4af37 45%, #e8d39a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gold-gradient {
+    background-image: linear-gradient(135deg, #d4af37 0%, #e8d39a 50%, #c9a227 100%);
+  }
+  .shadow-luxury {
+    box-shadow:
+      0 20px 50px -25px rgba(17, 17, 17, 0.18),
+      0 8px 20px -12px rgba(212, 175, 55, 0.18);
+  }
+
+  /* ── Premium depth: layered, soft, directional shadows ───────────────── */
+  .shadow-depth {
+    box-shadow:
+      0 1px 1px rgba(17, 17, 17, 0.03),
+      0 4px 8px -2px rgba(17, 17, 17, 0.05),
+      0 12px 24px -8px rgba(17, 17, 17, 0.08);
+  }
+  .shadow-depth-lg {
+    box-shadow:
+      0 2px 4px rgba(17, 17, 17, 0.04),
+      0 8px 16px -4px rgba(17, 17, 17, 0.06),
+      0 24px 48px -12px rgba(17, 17, 17, 0.12),
+      0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  }
+  .shadow-gold-glow {
+    box-shadow:
+      0 10px 30px -10px rgba(212, 175, 55, 0.45),
+      0 4px 12px -6px rgba(212, 175, 55, 0.35);
+  }
+
+  /* ── Glassmorphism ───────────────────────────────────────────────────── */
+  .glass {
+    background-color: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  .glass-dark {
+    background-color: rgba(17, 17, 17, 0.55);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* ── Gradient hairline border (premium card edge) ────────────────────── */
+  .border-gradient-gold {
+    border: 1px solid transparent;
+    background-image:
+      linear-gradient(#ffffff, #ffffff),
+      linear-gradient(135deg, rgba(212, 175, 55, 0.6), rgba(232, 211, 154, 0.15) 50%, rgba(212, 175, 55, 0.5));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  /* ── 3D tilt helpers ─────────────────────────────────────────────────── */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* ── Button sheen sweep ──────────────────────────────────────────────── */
+  .sheen {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .sheen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.45) 48%,
+      transparent 62%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  .sheen:hover::after {
+    transform: translateX(120%);
+  }
+
+  /* ── Floating motion ─────────────────────────────────────────────────── */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* ── Shimmer (skeleton / loading) ────────────────────────────────────── */
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  .animate-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .animate-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  .animate-ticker {
+    animation: ticker 30s linear infinite;
+  }
+}

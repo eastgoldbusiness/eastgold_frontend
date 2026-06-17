@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/east-gold-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EastGold Gold Exchange — premium, transparent gold valuation and instant payment across Coimbatore. BIS certified process and XRF purity testing."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>EastGold — Premium Gold Exchange in Coimbatore</title>
+    <script>
+      // Apply the saved language to <html> before first paint so the
+      // language-specific (Tamil) typography rules apply on initial load,
+      // not just after the language toggle is used. The `lang-ta` class is
+      // what the CSS keys off — a class survives browser translation tools
+      // (e.g. Google Translate) overwriting the `lang` attribute after load.
+      try {
+        var l = localStorage.getItem('eastgold-lang')
+        if (l === 'ta') {
+          document.documentElement.lang = 'ta'
+          document.documentElement.classList.add('lang-ta')
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

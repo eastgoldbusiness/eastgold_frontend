@@ -1,0 +1,23 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Deploys the EastGold site as a static site (Vite SPA).
+services:
+  - type: web
+    name: eastgold
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    # Pin Node so Vite 8 (requires Node 20+) builds reliably on Render.
+    envVars:
+      - key: NODE_VERSION
+        value: "20.18.0"
+    # SPA fallback: serve index.html for any client-side route so deep links
+    # and refreshes don't 404 (React Router uses the History API).
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    # Long-cache fingerprinted assets; keep index.html always fresh.
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
