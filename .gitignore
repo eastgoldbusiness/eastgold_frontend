@@ -20,6 +20,9 @@ dist-ssr
 # Local design scratch assets (source images, not used by the app)
 design-assets
 
+# Backend lives in a separate repo; keep this repo frontend-only
+server
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
