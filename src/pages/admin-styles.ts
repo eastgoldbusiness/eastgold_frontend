@@ -188,7 +188,7 @@ export const adminStyles = `
   }
   .eg-admin-table td { padding: 12px; border-bottom: 1px solid var(--eg-line); vertical-align: middle; }
   .eg-admin-table tr:last-child td { border-bottom: none; }
-  .eg-admin-message { max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--eg-ash); }
+  .eg-admin-message { max-width: 280px; min-width: 180px; white-space: normal; overflow-wrap: anywhere; color: var(--eg-ash); }
   .eg-admin-empty { text-align: center; color: var(--eg-ash); padding: 28px 12px; }
 
   /* ── Toolbar / search / filters ───────────────────────────────────────── */

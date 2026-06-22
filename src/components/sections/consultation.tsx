@@ -16,6 +16,7 @@ import { buttonVariants } from '@/components/ui/button-variants'
 import { CONTACT } from '@/data/site'
 import { easeLux, fadeInUp, staggerContainer, viewportOnce } from '@/lib/animations'
 import { useLanguage } from '@/i18n/language-context'
+import { translations } from '@/i18n/translations'
 import { createEnquiry } from '@/lib/api/enquiries'
 
 const schema = z.object({
@@ -41,6 +42,12 @@ export function Consultation() {
   } = useForm<FormValues>({ resolver: zodResolver(schema) })
 
   const onSubmit = async (values: FormValues) => {
+    // Store the canonical English service label so the admin dashboard always
+    // reads consistently, regardless of the language the visitor used.
+    const serviceIndex = t.consultation.serviceOptions.indexOf(values.service ?? '')
+    const service =
+      serviceIndex >= 0 ? translations.en.consultation.serviceOptions[serviceIndex] : values.service
+
     // Persist the enquiry to the backend (MongoDB). The submission UX is kept
     // identical even if the API is unreachable, so the public site never breaks.
     try {
@@ -49,7 +56,7 @@ export function Consultation() {
         phone: values.mobile,
         message: values.message,
         area: values.area,
-        service: values.service,
+        service,
         typeOfGold: values.typeOfGold,
         callTime: values.callTime,
       })

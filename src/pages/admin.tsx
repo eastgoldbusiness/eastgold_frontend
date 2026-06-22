@@ -31,6 +31,7 @@ import {
   type EnquiryStatus,
 } from '@/lib/api/enquiries'
 import { fetchAdminProfile, updateAdminProfile, type AdminProfile } from '@/lib/api/admin'
+import { translations } from '@/i18n/translations'
 import { GOLD_RATE_QUERY_KEY } from '@/hooks/use-gold-rate'
 import { AUTH_UNAUTHORIZED_EVENT } from '@/lib/axios'
 import { adminStyles } from './admin-styles'
@@ -59,6 +60,22 @@ function formatDate(iso: string): string {
 
 function rupees(amount: number): string {
   return new Intl.NumberFormat('en-IN').format(amount)
+}
+
+/**
+ * Normalises a stored service value to its English label. Older enquiries may
+ * have been saved in the language the visitor used (e.g. Tamil); the service
+ * options align by index across languages, so a match in any language maps
+ * back to the canonical English label.
+ */
+function serviceInEnglish(service?: string): string {
+  if (!service) return '—'
+  const en = translations.en.consultation.serviceOptions
+  for (const lang of Object.values(translations)) {
+    const idx = lang.consultation.serviceOptions.indexOf(service)
+    if (idx >= 0) return en[idx]
+  }
+  return service
 }
 
 /**
@@ -572,7 +589,10 @@ function EnquiriesSection() {
               <tr>
                 <th>Name</th>
                 <th>Phone</th>
-                <th>Email</th>
+                <th>Area</th>
+                <th>Service</th>
+                <th>Type of Gold</th>
+                <th>Preferred Call Time</th>
                 <th>Message</th>
                 <th>Date</th>
                 <th>Status</th>
@@ -589,7 +609,10 @@ function EnquiriesSection() {
                         {e.phone}
                       </a>
                     </td>
-                    <td data-label="Email">{e.email || '—'}</td>
+                    <td data-label="Area">{e.area || '—'}</td>
+                    <td data-label="Service">{serviceInEnglish(e.service)}</td>
+                    <td data-label="Type of Gold">{e.typeOfGold || '—'}</td>
+                    <td data-label="Preferred Call Time">{e.callTime || '—'}</td>
                     <td data-label="Message" className="eg-admin-message" title={e.message}>
                       {e.message || '—'}
                     </td>
@@ -626,7 +649,7 @@ function EnquiriesSection() {
                 ))
               ) : (
                 <tr>
-                  <td colSpan={7} className="eg-admin-empty">
+                  <td colSpan={10} className="eg-admin-empty">
                     {list.isLoading ? 'Loading…' : 'No enquiries found.'}
                   </td>
                 </tr>
