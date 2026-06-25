@@ -325,6 +325,10 @@ function ServicePanel({ card, index }: { card: ServiceCard; index: number }) {
       >
         <img
           src={card.image}
+          srcSet={`${card.image.replace('.webp', '-sm.webp')} 400w, ${card.image.replace('.webp', '-md.webp')} 800w`}
+          sizes="(max-width: 1024px) 100vw, 420px"
+          width={420}
+          height={280}
           alt={card.title}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.03]"
           loading="lazy"
@@ -343,6 +347,10 @@ function ServicePanel({ card, index }: { card: ServiceCard; index: number }) {
       >
         <img
           src={card.image}
+          srcSet={`${card.image.replace('.webp', '-sm.webp')} 400w, ${card.image.replace('.webp', '-md.webp')} 800w`}
+          sizes="(max-width: 1024px) 100vw, 420px"
+          width={350}
+          height={140}
           alt={card.title}
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"

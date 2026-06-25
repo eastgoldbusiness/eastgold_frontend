@@ -371,6 +371,12 @@ export function Hero() {
 
           <img
             src="/images/hero-bg.webp"
+            srcSet="/images/hero-bg-sm.webp 480w, /images/hero-bg-md.webp 800w, /images/hero-bg-lg.webp 1200w, /images/hero-bg.webp 1600w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            width={550}
+            height={600}
+            fetchPriority="high"
+            decoding="sync"
             alt="EastGold customer exchange"
             style={{
               width: '100%',
@@ -388,6 +394,12 @@ export function Hero() {
         <div className="relative overflow-hidden lg:hidden" style={{ maxHeight: '50vh' }}>
           <img
             src="/images/hero-bg.webp"
+            srcSet="/images/hero-bg-sm.webp 480w, /images/hero-bg-md.webp 800w, /images/hero-bg-lg.webp 1200w, /images/hero-bg.webp 1600w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            width={400}
+            height={250}
+            fetchPriority="high"
+            decoding="sync"
             alt="EastGold customer exchange"
             style={{
               width: '100%',

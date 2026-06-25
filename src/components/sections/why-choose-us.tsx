@@ -144,6 +144,12 @@ export function WhyChooseUs() {
           alt="Premium gold bars and jewelry background"
           className="h-full w-full object-cover object-center opacity-90"
           src="/images/why-choose-bg.webp"
+          srcSet="/images/why-choose-bg-sm.webp 480w, /images/why-choose-bg-md.webp 800w, /images/why-choose-bg-lg.webp 1200w, /images/why-choose-bg.webp 1600w"
+          sizes="100vw"
+          width={1200}
+          height={800}
+          loading="lazy"
+          decoding="async"
         />
         {/* Gradient overlay to improve text legibility */}
         <div

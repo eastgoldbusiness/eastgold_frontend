@@ -166,6 +166,12 @@ export function About() {
       <div className="order-1 w-full lg:order-2 lg:h-auto lg:w-1/2">
         <img
           src="/images/about-eastgold.webp"
+          srcSet="/images/about-eastgold-sm.webp 480w, /images/about-eastgold-md.webp 800w, /images/about-eastgold-lg.webp 1200w, /images/about-eastgold.webp 1600w"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          width={600}
+          height={500}
+          loading="lazy"
+          decoding="async"
           alt="EastGold gold exchange office with precision weighing scale"
           className="h-64 w-full object-cover object-center sm:h-80 lg:h-full"
         />
