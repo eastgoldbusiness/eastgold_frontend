@@ -165,7 +165,7 @@ export function About() {
       {/* ── RIGHT — image ────────────────────────────────────────────────── */}
       <div className="order-1 w-full lg:order-2 lg:h-auto lg:w-1/2">
         <img
-          src="/images/about-eastgold.png"
+          src="/images/about-eastgold.webp"
           alt="EastGold gold exchange office with precision weighing scale"
           className="h-64 w-full object-cover object-center sm:h-80 lg:h-full"
         />

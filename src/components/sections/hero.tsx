@@ -370,7 +370,7 @@ export function Hero() {
           />
 
           <img
-            src="/images/hero-bg.png"
+            src="/images/hero-bg.webp"
             alt="EastGold customer exchange"
             style={{
               width: '100%',
@@ -387,7 +387,7 @@ export function Hero() {
         {/* Mobile image — shown below text on small screens */}
         <div className="relative overflow-hidden lg:hidden" style={{ maxHeight: '50vh' }}>
           <img
-            src="/images/hero-bg.png"
+            src="/images/hero-bg.webp"
             alt="EastGold customer exchange"
             style={{
               width: '100%',

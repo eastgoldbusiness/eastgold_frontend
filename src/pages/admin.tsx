@@ -122,7 +122,7 @@ function Brand({ caption }: { caption: string }) {
   return (
     <div className="eg-admin-brand">
       <span className="eg-admin-logo">
-        <img src="/east-gold-logo.png" alt="EastGold" />
+        <img src="/east-gold-logo.webp" alt="EastGold" />
       </span>
       <span className="eg-admin-wordmark">EastGold</span>
       <span className="eg-admin-caption">{caption}</span>
@@ -216,7 +216,7 @@ function DashboardShell({ onLogout }: { onLogout: () => void }) {
       <aside className={`eg-admin-sidebar ${navOpen ? 'is-open' : ''}`}>
         <div className="eg-admin-sidebrand">
           <span className="eg-admin-logo eg-admin-logo--sm">
-            <img src="/east-gold-logo.png" alt="EastGold" />
+            <img src="/east-gold-logo.webp" alt="EastGold" />
           </span>
           <span>EastGold</span>
           <button

@@ -143,7 +143,7 @@ export function WhyChooseUs() {
         <img
           alt="Premium gold bars and jewelry background"
           className="h-full w-full object-cover object-center opacity-90"
-          src="/images/why-choose-bg.png"
+          src="/images/why-choose-bg.webp"
         />
         {/* Gradient overlay to improve text legibility */}
         <div

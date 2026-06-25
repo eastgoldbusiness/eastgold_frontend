@@ -63,7 +63,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full">
                 <img
-                  src="/east-gold-logo.png"
+                  src="/east-gold-logo.webp"
                   alt={`${CONTACT.brand} logo`}
                   className="h-full w-full object-contain"
                 />

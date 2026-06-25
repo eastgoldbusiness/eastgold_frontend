@@ -140,37 +140,37 @@ export const SERVICES: Service[] = [
     icon: HandCoins,
     title: 'Sell Old Gold',
     description: 'Turn unused jewellery into instant cash at the best market value.',
-    image: '/images/services/sell-old-gold.png',
+    image: '/images/services/sell-old-gold.webp',
   },
   {
     icon: Sparkles,
     title: 'Gold Exchange',
     description: 'Exchange old gold for fresh value with complete transparency.',
-    image: '/images/services/gold-exchange.png',
+    image: '/images/services/gold-exchange.webp',
   },
   {
     icon: Scale,
     title: 'Gold Valuation',
     description: 'Certified XRF assessment of purity and weight in minutes.',
-    image: '/images/services/gold-valuation.png',
+    image: '/images/services/gold-valuation.webp',
   },
   {
     icon: Landmark,
     title: 'Release Pledged Gold',
     description: 'We help release your pledged gold from banks and lenders smoothly.',
-    image: '/images/services/release-pledged-gold.png',
+    image: '/images/services/release-pledged-gold.webp',
   },
   {
     icon: Building2,
     title: 'Gold Loan Settlement',
     description: 'Settle outstanding gold loans quickly with expert assistance.',
-    image: '/images/services/gold-loan-settlement.png',
+    image: '/images/services/gold-loan-settlement.webp',
   },
   {
     icon: Wallet,
     title: 'Instant Cash Transfer',
     description: 'Immediate, secure settlement straight to your bank account.',
-    image: '/images/services/instant-cash-transfer.png',
+    image: '/images/services/instant-cash-transfer.webp',
   },
 ]
 

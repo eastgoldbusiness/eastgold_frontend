@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
-const LOGO_SRC = '/east-gold-logo.png'
+const LOGO_SRC = '/east-gold-logo.webp'
 
 interface LogoProps {
   className?: string

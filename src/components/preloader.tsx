@@ -14,7 +14,7 @@ export function Preloader() {
       >
         {/* Logo mark — fades in first */}
         <motion.img
-          src="/east-gold-logo.png"
+          src="/east-gold-logo.webp"
           alt="EastGold Logo"
           initial={{ opacity: 0, scale: 0.82, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}

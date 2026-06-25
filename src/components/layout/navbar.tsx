@@ -152,7 +152,7 @@ export function Navbar() {
             <img
               alt={`${CONTACT.brand} Logo`}
               className="h-full w-full object-contain"
-              src="/east-gold-logo.png"
+              src="/east-gold-logo.webp"
             />
           </motion.div>
           <span
