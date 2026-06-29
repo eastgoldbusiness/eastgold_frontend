@@ -19,13 +19,13 @@ import {
 export const CONTACT = {
   brand: 'EastGold',
   tagline: 'Premium Gold Exchange',
-  phoneDisplay: '+91 63748 71020',
-  phoneRaw: '+916374871020',
-  whatsappRaw: '916374871020',
-  email: 'seturajan31@gmail.com',
+  phoneDisplay: '+91 63747 70359',
+  phoneRaw: '+916374770359',
+  whatsappRaw: '916374770359',
+  email: 'eastgoldbusiness@gmail.com',
   branch: 'Coimbatore Main Branch',
   address: 'F2, 1st Floor, Om Muruga Plaza, Ponniya Street, SBI Bank Near, Cross Cut Road, Coimbatore – 641008',
-  hours: 'Mon – Sat · 10:00 AM – 8:00 PM',
+  hours: 'Monday – Saturday: 9:00 AM – 7:00 PM | Sunday: 9:00 AM – 5:00 PM',
 } as const
 
 export const NAV_LINKS = [

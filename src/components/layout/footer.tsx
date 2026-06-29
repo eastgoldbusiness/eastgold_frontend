@@ -74,20 +74,28 @@ export function Footer() {
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/55">{t.footer.about}</p>
             <div className="mt-6 space-y-3 text-sm text-white/60">
-              <p className="flex items-start gap-3">
+              <a
+                href="https://maps.app.goo.gl/Z2GvaGp1u4TEBhHX6?g_st=ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold-light flex items-start gap-3 transition-colors"
+                aria-label="Visit us on Google Maps"
+              >
                 <MapPin className="text-gold mt-0.5 h-4 w-4 shrink-0" />
                 {CONTACT.address}
-              </p>
+              </a>
               <a
                 href={`tel:${CONTACT.phoneRaw}`}
-                className="hover:text-gold-light flex items-center gap-3"
+                className="hover:text-gold-light flex items-center gap-3 transition-colors"
+                aria-label="Call us"
               >
                 <Phone className="text-gold h-4 w-4 shrink-0" />
                 {CONTACT.phoneDisplay}
               </a>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="hover:text-gold-light flex items-center gap-3"
+                className="hover:text-gold-light flex items-center gap-3 transition-colors"
+                aria-label="Send us an email"
               >
                 <Mail className="text-gold h-4 w-4 shrink-0" />
                 {CONTACT.email}
@@ -136,9 +144,19 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {CONTACT.brand} Gold Exchange. {t.footer.rights}
           </p>
-          <p>
-            {CONTACT.branch} · {CONTACT.hours}
-          </p>
+          <div className="flex flex-col items-center gap-1 sm:items-end">
+            <a
+              href="https://www.javixtechnologies.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-1 transition-colors hover:text-[#D69E2E]"
+            >
+              <span>Designed & Developed by</span>
+              <span className="font-medium underline-offset-4 group-hover:underline">
+                Javix Technologies
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

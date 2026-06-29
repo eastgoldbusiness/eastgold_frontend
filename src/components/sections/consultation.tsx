@@ -107,6 +107,7 @@ export function Consultation() {
                     buttonVariants({ size: 'md' }),
                     'bg-emerald-500 text-white hover:bg-emerald-600',
                   )}
+                  aria-label="Chat on WhatsApp"
                 >
                   <MessageCircle className="h-5 w-5" /> {t.consultation.whatsapp}
                 </a>
@@ -116,6 +117,7 @@ export function Consultation() {
                     buttonVariants({ variant: 'outline', size: 'md' }),
                     'border-white/30 bg-white/5 whitespace-nowrap text-white hover:bg-white/10',
                   )}
+                  aria-label="Call us"
                 >
                   <Phone className="h-5 w-5 shrink-0" /> {CONTACT.phoneDisplay}
                 </a>
@@ -126,9 +128,15 @@ export function Consultation() {
               <p className="text-gold flex items-center gap-3 font-serif text-xl font-semibold">
                 <Building2 className="h-5 w-5" /> {t.consultation.branch}
               </p>
-              <p className="flex items-start gap-3">
+              <a
+                href="https://maps.app.goo.gl/Z2GvaGp1u4TEBhHX6?g_st=ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 hover:text-white transition-colors"
+                aria-label="Visit us on Google Maps"
+              >
                 <MapPin className="text-gold mt-0.5 h-4 w-4 shrink-0" /> {CONTACT.address}
-              </p>
+              </a>
               <p className="flex items-center gap-3">
                 <Clock className="text-gold h-4 w-4 shrink-0" /> {t.consultation.hours}
               </p>

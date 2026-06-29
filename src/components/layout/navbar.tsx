@@ -231,6 +231,7 @@ export function Navbar() {
               <a
                 href={`tel:${CONTACT.phoneRaw}`}
                 className={cn(buttonVariants({ variant: 'outline', size: 'sm' }))}
+                aria-label="Call us"
               >
                 <Phone className="h-4 w-4" /> {t.nav.call}
               </a>
