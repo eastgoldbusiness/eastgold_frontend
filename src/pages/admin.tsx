@@ -2,6 +2,8 @@ import { useEffect, useState, type FormEvent } from 'react'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import {
   Coins,
+  Eye,
+  EyeOff,
   Inbox,
   LayoutDashboard,
   LogOut,
@@ -134,6 +136,7 @@ function Brand({ caption }: { caption: string }) {
 function LoginScreen({ onSuccess }: { onSuccess: () => void }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const login = useMutation({
@@ -171,16 +174,26 @@ function LoginScreen({ onSuccess }: { onSuccess: () => void }) {
 
       <div className="eg-admin-field">
         <label htmlFor="admin-password">Password</label>
-        <input
-          id="admin-password"
-          className="eg-admin-input"
-          type="password"
-          autoComplete="current-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="••••••••"
-          required
-        />
+        <div className="eg-admin-inputwrap">
+          <input
+            id="admin-password"
+            className="eg-admin-input eg-admin-input--eye"
+            type={showPassword ? 'text' : 'password'}
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="••••••••"
+            required
+          />
+          <button
+            type="button"
+            className="eg-admin-eye-btn"
+            onClick={() => setShowPassword(v => !v)}
+            aria-label={showPassword ? 'Hide password' : 'Show password'}
+          >
+            {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+          </button>
+        </div>
       </div>
 
       {error && <p className="eg-admin-error">{error}</p>}
@@ -698,6 +711,7 @@ function ProfileEditor({
   const [name, setName] = useState(() => initial.name ?? '')
   const [email, setEmail] = useState(() => initial.email ?? '')
   const [password, setPassword] = useState('')
+  const [showSettingsPassword, setShowSettingsPassword] = useState(false)
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -747,15 +761,25 @@ function ProfileEditor({
 
           <div className="eg-admin-field">
             <label htmlFor="profile-password">New Password</label>
-            <input
-              id="profile-password"
-              className="eg-admin-input"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Leave blank to keep current"
-              autoComplete="new-password"
-            />
+            <div className="eg-admin-inputwrap">
+              <input
+                id="profile-password"
+                className="eg-admin-input eg-admin-input--eye"
+                type={showSettingsPassword ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Leave blank to keep current"
+                autoComplete="new-password"
+              />
+              <button
+                type="button"
+                className="eg-admin-eye-btn"
+                onClick={() => setShowSettingsPassword(v => !v)}
+                aria-label={showSettingsPassword ? 'Hide password' : 'Show password'}
+              >
+                {showSettingsPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+              </button>
+            </div>
           </div>
 
           <div className="eg-admin-formactions">

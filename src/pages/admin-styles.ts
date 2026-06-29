@@ -65,6 +65,14 @@ export const adminStyles = `
   .eg-admin-inputwrap { position: relative; }
   .eg-admin-prefix { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 15px; font-weight: 600; color: #6B6B6B; pointer-events: none; }
   .eg-admin-input--prefixed { padding-left: 30px; }
+  .eg-admin-input--eye { padding-right: 42px; }
+  .eg-admin-eye-btn {
+    position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+    background: none; border: none; cursor: pointer; padding: 4px;
+    color: #9B9B9B; display: flex; align-items: center; justify-content: center;
+    border-radius: 6px; transition: color .2s, background .2s;
+  }
+  .eg-admin-eye-btn:hover { color: var(--eg-gold); background: rgba(212,175,55,0.08); }
 
   .eg-admin-btn {
     padding: 12px 20px; border-radius: 12px; border: none; cursor: pointer;
