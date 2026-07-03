@@ -97,6 +97,7 @@ export interface Translation {
     successTitle: string
     successBody: string
     submitAnother: string
+    googleBusiness: string
   }
   footer: {
     about: string
@@ -127,25 +128,26 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       eyebrow: 'Welcome to EastGold',
-      headline: 'Turn Your Gold Into',
+      headline: 'Sell Your Gold with',
       dynamicWords: [
-        'Value With Confidence',
-        'Complete Transparency',
-        'Trusted Hands',
-        'Genuine Worth',
-        'Peace of Mind',
+        'Transparent Valuation',
+        'Professional Gold Testing',
+        'Prompt Payment',
+        'Secure Processing',
+        'Trusted Service',
+
       ],
       subheading:
         'At EastGold, we respect the memories behind your gold and provide a transparent valuation through a simple, comfortable process.',
       ticker: [
-        'Fair, Market-Linked Rates',
-        'Professional Gold Valuation',
-        'Transparent Pricing',
-        'Trusted by Families',
-        'Prompt, Secure Settlement',
-        'Experienced Valuers',
-        'No Hidden Charges',
-        'Secure Transactions',
+        'Cash for Gold',
+        'Gold Buyers in Coimbatore',
+        'Gold Purity Testing',
+        'XRF Gold Testing',
+        'Transparent Gold Valuation',
+        'Prompt Payment',
+        'Sell Old Gold',
+        'Secure Gold Transactions',
       ],
     },
     why: {
@@ -204,7 +206,7 @@ export const translations: Record<Language, Translation> = {
         { title: 'Contact Us', description: 'Contact us through phone, WhatsApp, or the website enquiry form.' },
         { title: 'Gold Evaluation', description: 'Your gold is checked for weight and purity before valuation.' },
         { title: 'Know the Value', description: 'The valuation and service details are explained clearly.' },
-        { title: 'Make Your Decision', description: 'You can make your decision comfortably after understanding the complete details.' },
+        { title: 'Instant Payment', description: 'Cash for Gold in Coimbatore with transparent valuation and prompt payment for eligible gold items.' },
       ],
     },
     services: {
@@ -246,25 +248,25 @@ export const translations: Record<Language, Translation> = {
           name: 'Lakshmi Narayanan',
           profession: 'School Teacher, Saibaba Colony',
           review:
-            'They tested my gold in front of me and explained every number. I received the full amount in my account within minutes. Truly transparent.',
+            'I visited East Gold for Cash for Gold in Coimbatore. The transparent XRF gold purity testing and professional gold valuation gave me confidence, and the payment was processed promptly after verification.',
         },
         {
           name: 'Karthik Raja',
           profession: 'Textile Business Owner, Tiruppur',
           review:
-            'I exchanged old jewellery during a cash crunch. The valuation was the fairest I found and the process felt completely professional.',
+            'I wanted to sell my old gold and found East Gold through their Cash for Gold service in Coimbatore. The gold valuation process was transparent, professional, and completed smoothly.',
         },
         {
           name: 'Priya Devi',
           profession: 'Software Engineer, Peelamedu',
           review:
-            'They helped me release my pledged gold from the bank without any stress. Polite team, private rooms, and no hidden charges at all.',
+            'East Gold guided me through the gold release process and explained every step clearly. Their transparent gold valuation, secure process, and courteous staff made the experience comfortable.',
         },
         {
           name: 'Mohammed Anwar',
           profession: 'Retired Bank Manager, RS Puram',
           review:
-            'As a former banker I am hard to impress. EastGold’s documentation and XRF testing are genuinely institutional grade. Highly trustworthy.',
+            'The XRF gold purity testing and transparent valuation process reflected a professional standard. East Gold provides a reliable Cash for Gold service in Coimbatore with proper documentation.',
         },
       ],
     },
@@ -335,6 +337,7 @@ export const translations: Record<Language, Translation> = {
       successBody:
         'Thank you. Our valuation expert will contact you shortly. For anything urgent, please call or WhatsApp us.',
       submitAnother: 'Submit another request',
+      googleBusiness: 'View Google Business Profile →',
     },
     footer: {
       about:
@@ -371,25 +374,25 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       eyebrow: 'EastGold-க்கு வரவேற்கிறோம்',
-      headline: 'உங்கள் தங்கத்தின் மதிப்பை',
+      headline: 'உங்கள் தங்கத்தை விற்க',
       dynamicWords: [
-        'அறியுங்கள்',
-        'பெறுங்கள்',
-        'உணருங்கள்',
-        'நம்புங்கள்',
-        'காணுங்கள்',
+        'வெளிப்படையான மதிப்பீட்டுடன்',
+        'தொழில்முறை பரிசோதனையுடன்',
+        'விரைவான பணப் பரிவர்த்தனையுடன்',
+        'பாதுகாப்பான செயல்முறையுடன்',
+        'நம்பகமான சேவையுடன்',
       ],
       subheading:
         'உங்கள் குடும்பத்தின் நினைவுகளை மதித்து, உங்கள் தங்கத்திற்கு வெளிப்படையான மதிப்பீடு மற்றும் எளிமையான சேவையை EastGold வழங்குகிறது.',
       ticker: [
-        'நியாயமான சந்தை விலை',
-        'தொழில்முறை தங்க மதிப்பீடு',
-        'வெளிப்படையான விலை',
-        'குடும்பங்களின் நம்பிக்கை',
-        'விரைவான, பாதுகாப்பான தீர்வு',
-        'அனுபவமிக்க மதிப்பீட்டாளர்கள்',
-        'மறைமுக கட்டணம் இல்லை',
-        'பாதுகாப்பான பரிவர்த்தனைகள்',
+        'தங்கத்திற்கு உடனடி பணம்',
+        'கோயம்புத்தூரில் தங்கம் வாங்குபவர்கள்',
+        'தங்கத் தூய்மை பரிசோதனை',
+        'XRF தங்கப் பரிசோதனை',
+        'வெளிப்படையான தங்க மதிப்பீடு',
+        'விரைவான பணப் பரிவர்த்தனை',
+        'பழைய தங்கத்தை விற்க',
+        'பாதுகாப்பான தங்கப் பரிவர்த்தனை',
       ],
     },
     why: {
@@ -448,7 +451,7 @@ export const translations: Record<Language, Translation> = {
         { title: 'எங்களை தொடர்புகொள்ளுங்கள்', description: 'அழைப்பு, WhatsApp அல்லது இணையதள படிவம் மூலம் தொடர்புகொள்ளுங்கள்.' },
         { title: 'தங்க மதிப்பீடு', description: 'தங்கத்தின் எடை மற்றும் தரம் சரிபார்க்கப்பட்டு மதிப்பீடு செய்யப்படும்.' },
         { title: 'மதிப்பை அறிந்துகொள்ளுங்கள்', description: 'மதிப்பீடு மற்றும் சேவை விவரங்கள் தெளிவாக விளக்கப்படும்.' },
-        { title: 'உங்கள் முடிவை எடுத்துக்கொள்ளுங்கள்', description: 'முழு தகவலையும் அறிந்த பிறகு உங்கள் வசதிக்கேற்ப முடிவு செய்யலாம்.' },
+        { title: 'உடனடி பணம்', description: 'கோயம்புத்தூரில் வெளிப்படையான தங்க மதிப்பீட்டுடன் தகுதியான தங்கப் பொருட்களுக்கு உடனடி பணம்.' },
       ],
     },
     services: {
@@ -463,6 +466,13 @@ export const translations: Record<Language, Translation> = {
         { title: 'அடமான தங்கம் மீட்பு உதவி', description: 'அடமானத்தில் இருக்கும் தங்கத்தை மீட்க தேவையான தகவல் மற்றும் வழிகாட்டல்.' },
         { title: 'தங்க விற்பனை உதவி', description: 'தங்கத்தை விற்கும் முன் தேவையான தகவல் மற்றும் மதிப்பீட்டு உதவி.' },
         { title: 'பாதுகாப்பான வங்கி பரிமாற்ற உதவி', description: 'தேவையான சரிபார்ப்பு மற்றும் ஆவண செயல்முறைக்கு பின் பாதுகாப்பான பரிவர்த்தனை ஆதரவு.' },
+
+        {
+          title: 'தங்கத்திற்கு உடனடி பணம்',
+          description: 'வெளிப்படையான தங்கத் தூய்மை பரிசோதனை மற்றும் சந்தை மதிப்பீட்டின் அடிப்படையில் பாதுகாப்பான மற்றும் விரைவான பணப் பரிவர்த்தனை.'
+        },
+
+
       ],
     },
     trust: {
@@ -490,25 +500,25 @@ export const translations: Record<Language, Translation> = {
           name: 'லட்சுமி நாராயணன்',
           profession: 'பள்ளி ஆசிரியர், சாய்பாபா காலனி',
           review:
-            'என் தங்கத்தை என் முன்னிலையில் சோதித்து ஒவ்வொரு எண்ணையும் விளக்கினார்கள். சில நிமிடங்களில் முழுத் தொகையை என் கணக்கில் பெற்றேன். உண்மையிலேயே வெளிப்படையானது.',
+            'கோயம்புத்தூரில் தங்கத்திற்கு உடனடி பணம் பெற East Gold-ஐ அணுகினேன். வெளிப்படையான XRF தங்கத் தூய்மை பரிசோதனை மற்றும் துல்லியமான தங்க மதிப்பீடு எனக்கு நம்பிக்கையை அளித்தது.',
         },
         {
           name: 'கார்த்திக் ராஜா',
-          profession: 'ஜவுளி வணிகர், திருப்பூர்',
+          profession: 'ஜவுளி தொழிலதிபர், திருப்பூர்',
           review:
-            'பணப் பற்றாக்குறை நேரத்தில் பழைய நகைகளை பரிமாற்றம் செய்தேன். நான் கண்ட மிக நியாயமான மதிப்பீடு இதுவே, செயல்முறை முழுக்க தொழில்முறையாக இருந்தது.',
+            'பழைய தங்கத்தை விற்க East Gold-ஐ தேர்வு செய்தேன். வெளிப்படையான தங்க மதிப்பீடு, தொழில்முறை சேவை மற்றும் பாதுகாப்பான செயல்முறை எனக்கு நல்ல அனுபவமாக இருந்தது.',
         },
         {
           name: 'பிரியா தேவி',
           profession: 'மென்பொருள் பொறியாளர், பீளமேடு',
           review:
-            'வங்கியில் அடகு வைத்த என் தங்கத்தை எந்த சிரமமும் இல்லாமல் மீட்க உதவினார்கள். மரியாதையான குழு, தனிப்பட்ட அறைகள், மறைமுக கட்டணம் எதுவும் இல்லை.',
+            'தங்க வெளியீட்டு செயல்முறையை தெளிவாக விளக்கி, வெளிப்படையான தங்க மதிப்பீட்டுடன் சிறந்த சேவையை வழங்கினர். முழு செயல்முறையும் பாதுகாப்பாகவும் நம்பகமாகவும் இருந்தது.',
         },
         {
-          name: 'முகமது அன்வர்',
-          profession: 'ஓய்வுபெற்ற வங்கி மேலாளர், ஆர்.எஸ். புரம்',
+          name: 'முகம்மது அன்வர்',
+          profession: 'ஓய்வு பெற்ற வங்கி மேலாளர், ஆர்.எஸ்.புரம்',
           review:
-            'முன்னாள் வங்கியாளராக என்னை நம்ப வைப்பது கடினம். EastGold-இன் ஆவணப்படுத்தல் மற்றும் XRF சோதனை உண்மையிலேயே நிறுவன தரம். மிகவும் நம்பகமானது.',
+            'XRF தங்கத் தூய்மை பரிசோதனை மற்றும் வெளிப்படையான தங்க மதிப்பீடு மிகவும் தொழில்முறை தரத்தில் இருந்தது. கோயம்புத்தூரில் நம்பகமான தங்கத்திற்கு உடனடி பணம் வழங்கும் சேவையாக East Gold உள்ளது.',
         },
       ],
     },
@@ -548,6 +558,10 @@ export const translations: Record<Language, Translation> = {
           answer:
             'தங்கத்தை நேரடியாக சரிபார்க்காமல் துல்லியமான மதிப்பை உறுதி செய்ய முடியாது. முதலில் எங்களை தொடர்புகொண்டு மதிப்பீட்டு நேரத்தை பதிவு செய்யலாம்.',
         },
+        {
+          question: "தங்கத்திற்கு உடனடி பணம் வழங்கும் செயல்முறை எப்படி செயல்படுகிறது?",
+          answer: "தங்கத்தின் மதிப்பீடும் தேவையான சரிபார்ப்பும் முடிந்தவுடன் பணம் விரைவாக வழங்கப்படும்."
+        },
       ],
     },
     consultation: {
@@ -579,6 +593,7 @@ export const translations: Record<Language, Translation> = {
       successBody:
         'நன்றி. எங்கள் மதிப்பீட்டு நிபுணர் விரைவில் உங்களைத் தொடர்பு கொள்வார். அவசரத்திற்கு, தயவுசெய்து அழைக்கவும் அல்லது WhatsApp செய்யவும்.',
       submitAnother: 'மற்றொரு கோரிக்கையை சமர்ப்பிக்கவும்',
+      googleBusiness: 'கூகுள் பிசினஸ் புரொஃபைலைக் காண்க →',
     },
     footer: {
       about:

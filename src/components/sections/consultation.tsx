@@ -128,15 +128,25 @@ export function Consultation() {
               <p className="text-gold flex items-center gap-3 font-serif text-xl font-semibold">
                 <Building2 className="h-5 w-5" /> {t.consultation.branch}
               </p>
-              <a
-                href="https://maps.app.goo.gl/Z2GvaGp1u4TEBhHX6?g_st=ac"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 hover:text-white transition-colors"
-                aria-label="Visit us on Google Maps"
-              >
-                <MapPin className="text-gold mt-0.5 h-4 w-4 shrink-0" /> {CONTACT.address}
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://maps.app.goo.gl/Z2GvaGp1u4TEBhHX6?g_st=ac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 hover:text-white transition-colors"
+                  aria-label="Visit us on Google Maps"
+                >
+                  <MapPin className="text-gold mt-0.5 h-4 w-4 shrink-0" /> {CONTACT.address}
+                </a>
+                <a
+                  href="https://share.google/lehI6SP3clNhAaFtI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-7 text-gold hover:text-gold-light transition-colors font-medium text-sm"
+                >
+                  {t.consultation.googleBusiness}
+                </a>
+              </div>
               <p className="flex items-center gap-3">
                 <Clock className="text-gold h-4 w-4 shrink-0" /> {t.consultation.hours}
               </p>

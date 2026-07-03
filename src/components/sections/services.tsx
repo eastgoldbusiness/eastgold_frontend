@@ -69,6 +69,15 @@ const SERVICE_CARDS: ServiceCard[] = [
     textDark: false,
     btnBorder: 'rgba(255,255,255,0.3)',
   },
+  {
+    number: '07',
+    title: 'Cash For Gold',
+    description: 'Cash for Gold services in Coimbatore with transparent purity testing and market-based valuation. Professional evaluation, secure transactions, and prompt payment for eligible gold items.',
+    image: '/images/services/cash-for-gold.png',
+    bg: '#242b5aff',
+    textDark: false,
+    btnBorder: 'rgba(255,255,255,0.3)',
+  },
 ]
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -325,7 +334,7 @@ function ServicePanel({ card, index }: { card: ServiceCard; index: number }) {
       >
         <img
           src={card.image}
-          srcSet={`${card.image.replace('.webp', '-sm.webp')} 400w, ${card.image.replace('.webp', '-md.webp')} 800w`}
+          srcSet={`${card.image.replace(/(\.\w+)$/, '-sm$1')} 400w, ${card.image.replace(/(\.\w+)$/, '-md$1')} 800w`}
           sizes="(max-width: 1024px) 100vw, 420px"
           width={420}
           height={280}
@@ -347,7 +356,7 @@ function ServicePanel({ card, index }: { card: ServiceCard; index: number }) {
       >
         <img
           src={card.image}
-          srcSet={`${card.image.replace('.webp', '-sm.webp')} 400w, ${card.image.replace('.webp', '-md.webp')} 800w`}
+          srcSet={`${card.image.replace(/(\.\w+)$/, '-sm$1')} 400w, ${card.image.replace(/(\.\w+)$/, '-md$1')} 800w`}
           sizes="(max-width: 1024px) 100vw, 420px"
           width={350}
           height={140}

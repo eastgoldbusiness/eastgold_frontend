@@ -209,28 +209,28 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Lakshmi Narayanan',
     profession: 'School Teacher, Saibaba Colony',
     review:
-      'They tested my gold in front of me and explained every number. I received the full amount in my account within minutes. Truly transparent.',
+      'I visited East Gold for Cash for Gold in Coimbatore. The transparent XRF gold purity testing and professional gold valuation gave me confidence, and the payment was processed promptly after verification.',
     avatar: 'https://images.unsplash.com/photo-1629112993078-b16b98b99b07?fit=crop&w=160&h=160&crop=faces',
   },
   {
     name: 'Karthik Raja',
     profession: 'Textile Business Owner, Tiruppur',
     review:
-      'I exchanged old jewellery during a cash crunch. The valuation was the best I found in Coimbatore and the process felt completely professional.',
+      'I wanted to sell my old gold and found East Gold through their Cash for Gold service in Coimbatore. The gold valuation process was transparent, professional, and completed smoothly.',
     avatar: 'https://images.unsplash.com/photo-1587837073080-448bc6a2329b?fit=crop&w=160&h=160&crop=faces',
   },
   {
     name: 'Priya Devi',
     profession: 'Software Engineer, Peelamedu',
     review:
-      'They helped me release my pledged gold from the bank without any stress. Polite team, private rooms, and no hidden charges at all.',
+      'East Gold guided me through the gold release process and explained every step clearly. Their transparent gold valuation, secure process, and courteous staff made the experience comfortable.',
     avatar: 'https://images.unsplash.com/photo-1701181392121-6982d097ae2b?fit=crop&w=160&h=160&crop=faces',
   },
   {
     name: 'Mohammed Anwar',
     profession: 'Retired Bank Manager, RS Puram',
     review:
-      'As a former banker I am hard to impress. EastGold’s documentation and XRF testing are genuinely institutional grade. Highly trustworthy.',
+      'The XRF gold purity testing and transparent valuation process reflected a professional standard. East Gold provides a reliable Cash for Gold service in Coimbatore with proper documentation.',
     avatar: 'https://images.unsplash.com/photo-1675956584870-b3331e50904c?fit=crop&w=160&h=160&crop=faces',
   },
 ]
@@ -270,6 +270,10 @@ export const FAQS: Faq[] = [
     question: 'Can the exact gold value be confirmed over the phone?',
     answer:
       'An exact value cannot be confirmed without physical verification. Contact us to schedule a valuation.',
+  },
+  {
+    question: "How does Instant Payment work for Cash for Gold?",
+    answer: "Payment is processed promptly after gold evaluation and the required verification process."
   },
 ]
 
