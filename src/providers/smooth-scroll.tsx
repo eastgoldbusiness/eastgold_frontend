@@ -27,7 +27,6 @@ export function SmoothScroll({ children }: PropsWithChildren) {
       // same eased feel instead of falling back to raw native scroll.
       syncTouch: true,
       syncTouchLerp: 0.09,
-      touchInertiaMultiplier: 30,
       touchMultiplier: 1.5,
     })
 
