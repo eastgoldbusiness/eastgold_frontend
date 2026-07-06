@@ -13,6 +13,8 @@ import { Trust } from '@/components/sections/trust'
 import { Testimonials } from '@/components/sections/testimonials'
 import { Faq } from '@/components/sections/faq'
 import { Consultation } from '@/components/sections/consultation'
+import { FloatingContact } from '@/components/FloatingContact'
+import { FloatingValuation } from '@/components/FloatingValuation'
 
 export function HomePage() {
   const [loading, setLoading] = useState(true)
@@ -42,6 +44,8 @@ export function HomePage() {
         <Faq />
         <Consultation />
       </main>
+      <FloatingContact />
+      <FloatingValuation />
       <Footer />
     </>
   )

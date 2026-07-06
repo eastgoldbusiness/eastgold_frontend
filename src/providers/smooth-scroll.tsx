@@ -23,6 +23,11 @@ export function SmoothScroll({ children }: PropsWithChildren) {
       easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 1,
+      // Extend the smooth glide to touch devices so mobile scrolling gets the
+      // same eased feel instead of falling back to raw native scroll.
+      syncTouch: true,
+      syncTouchLerp: 0.09,
+      touchInertiaMultiplier: 30,
       touchMultiplier: 1.5,
     })
 

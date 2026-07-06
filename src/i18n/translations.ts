@@ -164,24 +164,29 @@ export const translations: Record<Language, Translation> = {
       ],
       features: [
         {
-          title: 'Trusted Service',
-          description: 'Respectful and clear customer support at every step.',
+          title: 'Cash for Gold in Coimbatore',
+          description:
+            'Get instant cash for your gold with transparent valuation and competitive market prices.',
         },
         {
-          title: 'Simple Process',
-          description: 'A straightforward process that is easy to understand.',
+          title: 'Trusted Gold Buyers in Coimbatore',
+          description:
+            'Sell your gold to experienced and reliable gold buyers with complete confidence.',
         },
         {
-          title: 'Clear Information',
-          description: 'The valuation and next steps are always explained openly.',
+          title: 'Best Gold Price in Coimbatore',
+          description:
+            'Receive the best possible value for your gold based on current market rates.',
         },
         {
-          title: 'Customer Privacy',
-          description: 'Careful, confidential handling of your personal information.',
+          title: 'Instant Gold Valuation & Payment',
+          description:
+            'Enjoy quick gold assessment and fast payment through a simple process.',
         },
         {
-          title: 'Quick Customer Support',
-          description: 'Easy support through phone and WhatsApp whenever you need it.',
+          title: 'Safe & Secure Gold Selling Experience',
+          description:
+            'Experience secure, confidential, and customer-friendly gold transactions.',
         },
       ],
     },
@@ -409,24 +414,29 @@ export const translations: Record<Language, Translation> = {
       ],
       features: [
         {
-          title: 'நம்பிக்கையான சேவை',
-          description: 'ஒவ்வொரு கட்டத்திலும் மரியாதையான மற்றும் தெளிவான வாடிக்கையாளர் ஆதரவு.',
+          title: 'கோயம்புத்தூரில் தங்கத்திற்கு உடனடி பணம்',
+          description:
+            'வெளிப்படையான மதிப்பீடு மற்றும் போட்டி விலைகளுடன் உங்கள் தங்கத்திற்கு உடனடி பணம் பெறுங்கள்.',
         },
         {
-          title: 'எளிமையான செயல்முறை',
-          description: 'புரிந்துகொள்ள எளிதான நேரடியான வழிமுறை.',
+          title: 'கோயம்புத்தூரின் நம்பகமான தங்க வாங்குபவர்கள்',
+          description:
+            'அனுபவம் வாய்ந்த மற்றும் நம்பகமான தங்க வாங்குபவர்களிடம் நம்பிக்கையுடன் உங்கள் தங்கத்தை விற்கலாம்.',
         },
         {
-          title: 'வெளிப்படையான தகவல்',
-          description: 'மதிப்பீடு மற்றும் அடுத்த படிகள் எப்போதும் வெளிப்படையாக விளக்கப்படும்.',
+          title: 'கோயம்புத்தூரில் சிறந்த தங்க விலை',
+          description:
+            'தற்போதைய சந்தை விலைக்கு ஏற்ப உங்கள் தங்கத்திற்கு சிறந்த மதிப்பைப் பெறுங்கள்.',
         },
         {
-          title: 'தனியுரிமைக்கு முக்கியத்துவம்',
-          description: 'உங்கள் தனிப்பட்ட விவரங்களை கவனமாக, ரகசியமாக கையாளுதல்.',
+          title: 'உடனடி தங்க மதிப்பீடு மற்றும் பணம் வழங்கல்',
+          description:
+            'எளிய செயல்முறையின் மூலம் விரைவான தங்க மதிப்பீடு மற்றும் உடனடி பணம் பெறுங்கள்.',
         },
         {
-          title: 'விரைவான வாடிக்கையாளர் ஆதரவு',
-          description: 'தேவைப்படும்போது அழைப்பு மற்றும் WhatsApp மூலம் எளிதான ஆதரவு.',
+          title: 'பாதுகாப்பான மற்றும் நம்பகமான தங்க விற்பனை அனுபவம்',
+          description:
+            'பாதுகாப்பான, ரகசியமான மற்றும் வாடிக்கையாளர் நட்பு சேவையுடன் தங்க பரிவர்த்தனையை அனுபவியுங்கள்.',
         },
       ],
     },

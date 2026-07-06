@@ -142,15 +142,15 @@ export function Hero() {
 
   return (
     <div
+      className="min-h-[100svh] overflow-visible lg:h-screen lg:overflow-hidden"
       style={{
-        height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden',
       }}
     >
       <section
       id="home"
+      className="overflow-visible lg:overflow-hidden"
       style={{
         position: 'relative',
         flex: 1,
@@ -158,7 +158,6 @@ export function Hero() {
         display: 'flex',
         flexDirection: 'column',
         background: '#F5F5F3',
-        overflow: 'hidden',
       }}
     >
       {/* ── Main split container ────────────────────────────────────────── */}

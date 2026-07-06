@@ -19,14 +19,6 @@ const SCROLL_THRESHOLD = 50
 const PILL_SHADOW =
   '0 1px 2px rgba(0,0,0,0.03), 0 8px 24px rgba(0,0,0,0.04)'
 
-function SunIcon() {
-  return (
-    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM5.884 6.68a1 1 0 10-1.415-1.414l-.707.707a1 1 0 101.414 1.415l.707-.708zm10.212 0l.708.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.415 1.414zm-9.408 5.405L4.512 13.5a1 1 0 101.414 1.414l1.176-1.177a1 1 0 00-1.414-1.414zm8.272 0a1 1 0 00-1.414 1.414l1.176 1.177a1 1 0 001.414-1.414l-1.176-1.177zM10 11a2 2 0 100-4 2 2 0 000 4z" />
-    </svg>
-  )
-}
-
 function NavLink({
   href,
   label,
@@ -156,15 +148,15 @@ export function Navbar() {
             />
           </motion.div>
           <span
-            className="text-[1.35rem] font-medium tracking-tight"
+            className="hidden text-[1.35rem] font-medium tracking-tight min-[400px]:inline"
             style={{ fontFamily: 'Georgia, serif', color: '#111111' }}
           >
             EastGold
           </span>
         </a>
 
-        {/* Centered navigation */}
-        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 md:flex lg:gap-10">
+        {/* Centered navigation — nudged left to balance the phone CTA */}
+        <div className="absolute left-1/2 hidden -translate-x-[calc(50%+80px)] items-center gap-6 md:flex lg:gap-10">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.label}
@@ -175,22 +167,23 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* CTA + language + mobile toggle */}
+        {/* Language + phone CTA + mobile toggle */}
         <div className="flex items-center gap-2">
           <LanguageToggle />
           <motion.a
-            href="#contact"
+            href={`tel:${CONTACT.phoneRaw}`}
+            aria-label={`Call ${CONTACT.brand} at ${CONTACT.phoneDisplay}`}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: 'spring', stiffness: 320, damping: 20 }}
-            className="hidden items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold shadow-md transition-shadow hover:shadow-lg sm:inline-flex"
+            className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold shadow-md transition-shadow hover:shadow-lg sm:gap-2 sm:px-4 sm:py-2 sm:text-sm"
             style={{
               background: `linear-gradient(to right, ${GOLD[500]}, ${GOLD[600]})`,
               color: '#1A1A1A',
             }}
           >
-            <SunIcon />
-            {t.nav.getValuation}
+            <Phone className="h-4 w-4" />
+            {CONTACT.phoneDisplay}
           </motion.a>
           <button
             type="button"
