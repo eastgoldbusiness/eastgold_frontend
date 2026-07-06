@@ -21,9 +21,9 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null)
 
 function getInitialLang(): Language {
-  if (typeof window === 'undefined') return 'en'
+  if (typeof window === 'undefined') return 'ta'
   const stored = window.localStorage.getItem(STORAGE_KEY)
-  return stored === 'ta' ? 'ta' : 'en'
+  return stored === 'en' ? 'en' : 'ta'
 }
 
 export function LanguageProvider({ children }: PropsWithChildren) {
