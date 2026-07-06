@@ -6,6 +6,7 @@ import { buttonVariants } from '@/components/ui/button-variants'
 import { CONTACT, NAV_LINKS } from '@/data/site'
 import { easeLux } from '@/lib/animations'
 import { useLanguage } from '@/i18n/language-context'
+import { trackClick } from '@/lib/api/analytics'
 
 /* Palette from the reference design */
 const GOLD = {
@@ -172,6 +173,7 @@ export function Navbar() {
           <LanguageToggle />
           <motion.a
             href={`tel:${CONTACT.phoneRaw}`}
+            onClick={() => trackClick('call')}
             aria-label={`Call ${CONTACT.brand} at ${CONTACT.phoneDisplay}`}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.97 }}
@@ -223,6 +225,7 @@ export function Navbar() {
             <div className="mt-2 grid grid-cols-2 gap-2">
               <a
                 href={`tel:${CONTACT.phoneRaw}`}
+                onClick={() => trackClick('call')}
                 className={cn(buttonVariants({ variant: 'outline', size: 'sm' }))}
                 aria-label="Call us"
               >

@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import {
+  BarChart3,
   Coins,
   Eye,
   EyeOff,
@@ -9,6 +10,7 @@ import {
   LogOut,
   Mail,
   Menu,
+  MessageCircle,
   Phone,
   RefreshCw,
   Search,
@@ -33,6 +35,7 @@ import {
   type EnquiryStatus,
 } from '@/lib/api/enquiries'
 import { fetchAdminProfile, updateAdminProfile, type AdminProfile } from '@/lib/api/admin'
+import { fetchAnalyticsDashboard, type ClickCounts } from '@/lib/api/analytics'
 import { translations } from '@/i18n/translations'
 import { GOLD_RATE_QUERY_KEY } from '@/hooks/use-gold-rate'
 import { AUTH_UNAUTHORIZED_EVENT } from '@/lib/axios'
@@ -373,6 +376,68 @@ function DashboardSection({ onNavigate }: { onNavigate: (s: Section) => void }) 
           )}
         </div>
       </div>
+
+      <ContactAnalyticsPanel />
+    </div>
+  )
+}
+
+/* ── Contact-button analytics ─────────────────────────────────────────────── */
+function ContactAnalyticsPanel() {
+  const analytics = useQuery({
+    queryKey: ['analytics-dashboard'],
+    queryFn: fetchAnalyticsDashboard,
+    // Keep the counts live as new clicks arrive.
+    refetchInterval: 15_000,
+    refetchOnWindowFocus: true,
+  })
+
+  const metrics = [
+    { key: 'call', label: 'Call Clicks', icon: Phone, tone: 'blue' },
+    { key: 'whatsapp', label: 'WhatsApp Clicks', icon: MessageCircle, tone: 'green' },
+    { key: 'contact', label: 'Total Contact Clicks', icon: BarChart3, tone: 'gold' },
+  ] as const
+
+  const group = (period: 'today' | 'total', counts?: ClickCounts) => (
+    <div className="eg-admin-cards">
+      {metrics.map((m) => (
+        <div key={`${period}-${m.key}`} className="eg-admin-statcard">
+          <span className={`eg-admin-staticon tone-${m.tone}`}>
+            <m.icon size={20} />
+          </span>
+          <div>
+            <p className="eg-admin-statvalue">{counts ? counts[m.key] : '—'}</p>
+            <p className="eg-admin-statlabel">{m.label}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+
+  return (
+    <div className="eg-admin-panel">
+      <div className="eg-admin-panelhead">
+        <h2>Contact Analytics</h2>
+        <button
+          type="button"
+          className="eg-admin-iconbtn"
+          onClick={() => analytics.refetch()}
+          aria-label="Refresh analytics"
+        >
+          <RefreshCw size={16} />
+        </button>
+      </div>
+
+      {analytics.isError ? (
+        <p className="eg-admin-muted">Could not load analytics.</p>
+      ) : (
+        <div className="eg-admin-stack">
+          <p className="eg-admin-muted">📅 Today</p>
+          {group('today', analytics.data?.today)}
+          <p className="eg-admin-muted">📊 All Time</p>
+          {group('total', analytics.data?.total)}
+        </div>
+      )}
     </div>
   )
 }

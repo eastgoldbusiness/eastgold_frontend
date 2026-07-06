@@ -4,6 +4,7 @@ import { Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { CONTACT } from '@/data/site'
 import { easeLux } from '@/lib/animations'
+import { trackClick, type ClickType } from '@/lib/api/analytics'
 
 /** Brand WhatsApp glyph — lucide ships no official brand mark. */
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -21,7 +22,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 interface FabConfig {
-  key: string
+  key: ClickType
   href: string
   external?: boolean
   ariaLabel: string
@@ -77,6 +78,7 @@ export function FloatingContact() {
           key={fab.key}
           href={fab.href}
           {...(fab.external ? { target: '_blank', rel: 'noreferrer' } : {})}
+          onClick={() => trackClick(fab.key)}
           aria-label={fab.ariaLabel}
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}

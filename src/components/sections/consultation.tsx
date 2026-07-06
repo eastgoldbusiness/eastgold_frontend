@@ -18,6 +18,7 @@ import { easeLux, fadeInUp, staggerContainer, viewportOnce } from '@/lib/animati
 import { useLanguage } from '@/i18n/language-context'
 import { translations } from '@/i18n/translations'
 import { createEnquiry } from '@/lib/api/enquiries'
+import { trackClick } from '@/lib/api/analytics'
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your full name'),
@@ -103,6 +104,7 @@ export function Consultation() {
                   href={whatsappHref}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={() => trackClick('whatsapp')}
                   className={cn(
                     buttonVariants({ size: 'md' }),
                     'bg-emerald-500 text-white hover:bg-emerald-600',
@@ -113,6 +115,7 @@ export function Consultation() {
                 </a>
                 <a
                   href={`tel:${CONTACT.phoneRaw}`}
+                  onClick={() => trackClick('call')}
                   className={cn(
                     buttonVariants({ variant: 'outline', size: 'md' }),
                     'border-white/30 bg-white/5 whitespace-nowrap text-white hover:bg-white/10',

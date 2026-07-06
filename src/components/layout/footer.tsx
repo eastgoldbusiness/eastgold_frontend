@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 import { CONTACT, FOOTER_LINKS } from '@/data/site'
 import { useLanguage } from '@/i18n/language-context'
+import { trackClick } from '@/lib/api/analytics'
 
 function FooterColumn({
   title,
@@ -96,6 +97,7 @@ export function Footer() {
               </div>
               <a
                 href={`tel:${CONTACT.phoneRaw}`}
+                onClick={() => trackClick('call')}
                 className="hover:text-gold-light flex items-center gap-3 transition-colors"
                 aria-label="Call us"
               >
@@ -104,6 +106,7 @@ export function Footer() {
               </a>
               <a
                 href={`mailto:${CONTACT.email}`}
+                onClick={() => trackClick('contact')}
                 className="hover:text-gold-light flex items-center gap-3 transition-colors"
                 aria-label="Send us an email"
               >
