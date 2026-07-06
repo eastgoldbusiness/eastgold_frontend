@@ -220,6 +220,21 @@ export function Hero() {
               }}
             />
 
+            {/* Gold Rate Today — minimal premium card */}
+            <motion.div
+              variants={fadeInUp}
+              className="inline-flex items-center gap-2 sm:gap-4 w-fit mb-5 sm:mb-6 px-3 py-2 sm:px-4 sm:py-2.5 bg-white border border-[#D4AF37]/40 rounded-lg shadow-[0_3px_12px_rgba(212,175,55,0.07)]"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              <span className="text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase text-[#D4AF37] whitespace-nowrap">
+                Gold Rate Today
+              </span>
+              <span className="w-px h-4 sm:h-5 bg-[#D4AF37]/30 shrink-0" />
+              <span className="text-[13px] sm:text-[14px] font-semibold text-[#111111] whitespace-nowrap">
+                1 Gram : ₹{formatRupees(oneGramRate)}
+              </span>
+            </motion.div>
+
             {/* Main headline */}
             <motion.h1
               variants={fadeInUp}
@@ -300,55 +315,6 @@ export function Hero() {
             >
               {t.hero.subheading}
             </motion.p>
-
-            {/* Gold Rate Today — minimal premium card */}
-            <motion.div
-              variants={fadeInUp}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 16,
-                width: 'fit-content',
-                marginTop: 20,
-                padding: '10px 16px',
-                background: '#FFFFFF',
-                border: '1px solid rgba(212, 175, 55, 0.4)',
-                borderRadius: 10,
-                boxShadow: '0 3px 12px rgba(212, 175, 55, 0.07)',
-                fontFamily: "'Inter', sans-serif",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: 10,
-                  fontWeight: 600,
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  color: '#D4AF37',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Gold Rate Today
-              </span>
-              <span
-                style={{
-                  width: 1,
-                  height: 20,
-                  background: 'rgba(212,175,55,0.3)',
-                  flexShrink: 0,
-                }}
-              />
-              <span
-                style={{
-                  fontSize: 14,
-                  fontWeight: 600,
-                  color: '#111111',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                1 Gram : ₹{formatRupees(oneGramRate)}
-              </span>
-            </motion.div>
           </motion.div>
         </div>
 
