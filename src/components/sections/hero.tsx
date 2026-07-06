@@ -294,7 +294,7 @@ export function Hero() {
                 fontSize: 17,
                 lineHeight: 1.8,
                 color: '#5A5A5A',
-                marginTop: 28,
+                marginTop: 20,
                 marginBottom: 0,
               }}
             >
@@ -306,11 +306,11 @@ export function Hero() {
               variants={fadeInUp}
               style={{
                 display: 'inline-flex',
-                flexDirection: 'column',
-                alignItems: 'flex-start',
+                alignItems: 'center',
+                gap: 16,
                 width: 'fit-content',
-                marginTop: 24,
-                padding: '10px 14px',
+                marginTop: 20,
+                padding: '10px 16px',
                 background: '#FFFFFF',
                 border: '1px solid rgba(212, 175, 55, 0.4)',
                 borderRadius: 10,
@@ -325,11 +325,19 @@ export function Hero() {
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   color: '#D4AF37',
-                  marginBottom: 4,
+                  whiteSpace: 'nowrap',
                 }}
               >
                 Gold Rate Today
               </span>
+              <span
+                style={{
+                  width: 1,
+                  height: 20,
+                  background: 'rgba(212,175,55,0.3)',
+                  flexShrink: 0,
+                }}
+              />
               <span
                 style={{
                   fontSize: 14,

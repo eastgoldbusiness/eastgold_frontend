@@ -432,9 +432,9 @@ function ContactAnalyticsPanel() {
         <p className="eg-admin-muted">Could not load analytics.</p>
       ) : (
         <div className="eg-admin-stack">
-          <p className="eg-admin-muted">📅 Today</p>
+          <p className="eg-admin-muted">Today</p>
           {group('today', analytics.data?.today)}
-          <p className="eg-admin-muted">📊 All Time</p>
+          <p className="eg-admin-muted">All Time</p>
           {group('total', analytics.data?.total)}
         </div>
       )}
